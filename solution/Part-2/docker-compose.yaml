@@ -1,0 +1,16 @@
+networks:
+  infra:
+services:
+  csvserver:
+   image: infracloudio/csvserver:latest
+   container_name: csvserver
+   volumes:
+    - "./gencsv.sh:/src/gencsv.sh"
+   hostname: csvserver
+   environment:
+    - "CSVSERVER_BORDER: Orange"
+   networks:
+    - infra
+   command: bash -c "/src/gencsv.sh"
+   ports:
+    - "9393:9300"
