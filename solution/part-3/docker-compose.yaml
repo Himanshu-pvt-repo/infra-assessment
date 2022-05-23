@@ -8,7 +8,7 @@ services:
     - "./gencsv.sh:/src/gencsv.sh"
    hostname: csvserver
    environment:
-    - "CSVSERVER_BORDER: Orange"
+    CSVSERVER_BORDER: Orange
    networks:
     - infra
    command: bash -c "/src/gencsv.sh"
