@@ -1,0 +1,1 @@
+docker run -d --rm -v $(pwd):/src -e CSVSERVER_BORDER=Orange -p 9393:9300 8cb989ef80b5 /src/gencsv.sh
