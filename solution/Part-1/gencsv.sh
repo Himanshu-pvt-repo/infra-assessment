@@ -7,4 +7,5 @@ do
      num=`shuf -i 0-100 -n1`
      echo "$counter,$num" >> $file
 done
+chmod 700 $file
 ./csvserver
